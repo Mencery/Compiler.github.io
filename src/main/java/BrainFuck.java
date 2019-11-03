@@ -1,5 +1,5 @@
 
-import command.Compiler;
+import compiler.Compiler;
 
 import java.util.Scanner;
 

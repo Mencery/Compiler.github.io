@@ -1,5 +1,6 @@
 package command;
 
+
 import memory.Memory;
 
 /**
@@ -10,7 +11,15 @@ public class IncrementPointerCommand implements Command {
 
     @Override
     public void execute(Memory memory) {
-        memory.incrementPointer();
+
+        if (memory.getPtr() == memory.getLength() - 1) {//If memory is full
+            memory.setPtr(0);//pointer is returned to zero
+
+        }
+        else {
+          memory.incrementPtr();
+        }
+
 
     }
 
